@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		67F0A9B025C9513C000E8773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0A9AF25C9513C000E8773 /* AppDelegate.swift */; };
 		67F0A9B225C9513C000E8773 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9B125C9513C000E8773 /* GameScene.sks */; };
-		67F0A9B425C9513C000E8773 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9B325C9513C000E8773 /* Actions.sks */; };
 		67F0A9B625C9513D000E8773 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0A9B525C9513D000E8773 /* GameScene.swift */; };
 		67F0A9B825C9513D000E8773 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0A9B725C9513D000E8773 /* GameViewController.swift */; };
 		67F0A9BB25C9513D000E8773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9B925C9513D000E8773 /* Main.storyboard */; };
@@ -17,6 +16,9 @@
 		67F0A9C025C95143000E8773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9BE25C95143000E8773 /* LaunchScreen.storyboard */; };
 		67F0A9CB25C95143000E8773 /* MineSweeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0A9CA25C95143000E8773 /* MineSweeperTests.swift */; };
 		67F0A9D625C95143000E8773 /* MineSweeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0A9D525C95143000E8773 /* MineSweeperUITests.swift */; };
+		67F0A9E625CBAFFE000E8773 /* ガストン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9E525CBAFFE000E8773 /* ガストン.jpg */; };
+		67F0A9E825CE40F7000E8773 /* キャラ.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9E725CE40F6000E8773 /* キャラ.png */; };
+		67F0A9EA25CE45AA000E8773 /* 2K22.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F0A9E925CE45A9000E8773 /* 2K22.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		67F0A9AC25C9513C000E8773 /* MineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F0A9AF25C9513C000E8773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F0A9B125C9513C000E8773 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		67F0A9B325C9513C000E8773 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		67F0A9B525C9513D000E8773 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		67F0A9B725C9513D000E8773 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		67F0A9BA25C9513D000E8773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		67F0A9D125C95143000E8773 /* MineSweeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MineSweeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F0A9D525C95143000E8773 /* MineSweeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineSweeperUITests.swift; sourceTree = "<group>"; };
 		67F0A9D725C95143000E8773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F0A9E525CBAFFE000E8773 /* ガストン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ガストン.jpg"; sourceTree = "<group>"; };
+		67F0A9E725CE40F6000E8773 /* キャラ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ.png"; sourceTree = "<group>"; };
+		67F0A9E925CE45A9000E8773 /* 2K22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2K22.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		67F0A9A325C9513C000E8773 = {
 			isa = PBXGroup;
 			children = (
+				67F0A9E425CBAF17000E8773 /* Resources */,
 				67F0A9AE25C9513C000E8773 /* MineSweeper */,
 				67F0A9C925C95143000E8773 /* MineSweeperTests */,
 				67F0A9D425C95143000E8773 /* MineSweeperUITests */,
@@ -105,7 +110,6 @@
 			children = (
 				67F0A9AF25C9513C000E8773 /* AppDelegate.swift */,
 				67F0A9B125C9513C000E8773 /* GameScene.sks */,
-				67F0A9B325C9513C000E8773 /* Actions.sks */,
 				67F0A9B525C9513D000E8773 /* GameScene.swift */,
 				67F0A9B725C9513D000E8773 /* GameViewController.swift */,
 				67F0A9B925C9513D000E8773 /* Main.storyboard */,
@@ -132,6 +136,16 @@
 				67F0A9D725C95143000E8773 /* Info.plist */,
 			);
 			path = MineSweeperUITests;
+			sourceTree = "<group>";
+		};
+		67F0A9E425CBAF17000E8773 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67F0A9E525CBAFFE000E8773 /* ガストン.jpg */,
+				67F0A9E725CE40F6000E8773 /* キャラ.png */,
+				67F0A9E925CE45A9000E8773 /* 2K22.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +254,11 @@
 			files = (
 				67F0A9BB25C9513D000E8773 /* Main.storyboard in Resources */,
 				67F0A9B225C9513C000E8773 /* GameScene.sks in Resources */,
+				67F0A9E625CBAFFE000E8773 /* ガストン.jpg in Resources */,
+				67F0A9EA25CE45AA000E8773 /* 2K22.png in Resources */,
+				67F0A9E825CE40F7000E8773 /* キャラ.png in Resources */,
 				67F0A9BD25C95143000E8773 /* Assets.xcassets in Resources */,
 				67F0A9C025C95143000E8773 /* LaunchScreen.storyboard in Resources */,
-				67F0A9B425C9513C000E8773 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
