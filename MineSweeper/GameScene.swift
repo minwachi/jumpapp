@@ -12,6 +12,8 @@ import GameplayKit
 class GameScene: SKScene {
     
     var mainCharNode:SKSpriteNode = SKSpriteNode(imageNamed: "2K22.png")
+    let gameOverLavel = SKLabelNode()
+    let clearLavel = SKLabelNode()
     
     override func didMove(to view: SKView) {
         // このシーンが表示されるタイミング
@@ -25,6 +27,18 @@ class GameScene: SKScene {
         
         self.backgroundColor = UIColor.white
         self.addhuman()
+        
+        self.clearLavel.text = "Clear!!"
+        self.clearLavel.fontSize = 128
+        self.clearLavel.fontColor = UIColor.red
+        self.clearLavel.alpha = 0
+        self.addChild(clearLavel)
+        
+        self.gameOverLavel.text = "Game Over"
+        self.gameOverLavel.fontSize = 128
+        self.gameOverLavel.fontColor = UIColor.black
+        self.gameOverLavel.alpha = 0
+        self.addChild(gameOverLavel)
         
         
     }
@@ -41,12 +55,8 @@ class GameScene: SKScene {
         self.mainCharNode.run(jumpActions)
         
         //gameover check
-        if self.isGameOver() == true {
-            let gameOverLavel = SKLabelNode()
-            gameOverLavel.text = "Game Over"
-            gameOverLavel.fontSize = 128
-            gameOverLavel.fontColor = UIColor.black
-            self.addChild(gameOverLavel)
+        if self.isClear() == true {
+            self.clearLavel.alpha = 1
         }
         
     }
@@ -57,7 +67,7 @@ class GameScene: SKScene {
      false: still okay
      */
     
-    func isGameOver() -> Bool{
+    func isClear() -> Bool{
         
         //self.view!.frame.height
         if self.mainCharNode.position.y > self.view!.frame.height / 2 - 100
@@ -79,25 +89,33 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
+        //あたり判定
+        guard let node = self.childNode(withName: "hito") else {return}
+        let nodes = self.nodes(at: node.position)
+        if nodes.count > 1{
+            self.gameOverLavel.alpha = 1
+        }
     }
     
     func addhuman(){
         let human = SKSpriteNode(imageNamed: "キャラ.png")
         let yPos = CGFloat(Int.random(in: 0 ..< Int(self.view!.frame.height))) - (self.view!.frame.height / 2)
         
+        human.name = "hito"
         human.position = CGPoint(
             x: self.view!.frame.width * -1,
             y: yPos
         )
         self.addChild(human)
-        let moveAction = SKAction.moveTo(x: self.view!.frame.width, duration: 2)
-        human.run(moveAction)
+        let moveAction = SKAction.moveTo(x: self.view!.frame.width , duration: 2)
+        human.run(
+            SKAction.sequence([moveAction, SKAction.removeFromParent()])
+        )
         
         let humanAttack = SKAction.run{
             self.addhuman()
         }
-        let newHumanAction = SKAction.sequence([SKAction.wait(forDuration: Double.random(in: 0 ..< 1)), humanAttack])
+        let newHumanAction = SKAction.sequence([SKAction.wait(forDuration: 2), humanAttack])
         self.run(newHumanAction)
     }
 }
